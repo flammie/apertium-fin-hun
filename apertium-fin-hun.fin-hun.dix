@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+  <!-- {{{ Define the alphabet below. -->
+   <alphabet>
+     aAbBcCdDefFgGhHiIjJkKlLmMnNoOPqQrRsStTuUvVwWxXyYzZ
+     ßšŠüÜžŽåÅäÄöÖ
+     -
+   </alphabet>
+
+  <sdefs>
+    <!-- }}}
+         {{{ Define symbol definitions within <sdef> here. -->
+
+                 <!-- c="UPOS" -->
+    <sdef n="n"       c="NOUN"/>
+    <sdef n="ij"      c="INTJ"/>
+    <sdef n="punct"   c="PUNCT"/>
+    <sdef n="sym"     c="SYM "/>
+    <sdef n="adj"     c="ADJ"/>
+    <sdef n="cnjcoo"  c="CONJ"/>
+    <sdef n="cnjadv"  c="SCONJ"/>
+    <sdef n="cnjsub"  c="SCONJ"/>
+    <sdef n="vbser"   c="VERB"/>
+    <sdef n="vbhaver" c="VERB"/>
+    <sdef n="vbmod"   c="AUX"/>
+    <sdef n="num"     c="NUM"/>
+    <sdef n="vaux"    c="AUX"/>
+    <sdef n="prn"     c="PRN"/>
+    <sdef n="adv"     c="ADV"/>
+    <sdef n="preadv"  c="ADV"/>
+    <sdef n="rel"     c="PRN"/>
+    <sdef n="pr"      c="ADP"/>
+    <sdef n="post"    c="ADP"/>
+    <sdef n="vblex"   c="VERB"/>
+    <sdef n="np"      c="PROPN"/>
+    <sdef n="sent"    c="PUNCT"/>
+    <sdef n="lquot"   c="PUNCT"/>
+    <sdef n="rquot"   c="PUNCT"/>
+    <sdef n="rpar"   c="PUNCT"/>
+    <sdef n="lpar"   c="PUNCT"/>
+    <sdef n="cm"      c="PUNCT"/>
+    <sdef n="guio"      c="PUNCT"/>
+    <sdef n="apos"      c="PUNCT"/>
+    <sdef n="part"    c="PART"/>
+    <sdef n="ito"     c="PART"/>
+    <sdef n="pprep"      c="ADP??"/>
+
+    <sdef n="atp"      c="NOUN"/>
+    <sdef n="cmp"      c="--comp"/>
+                 <!-- c="Ufeat=value" -->
+    <sdef n="sg"    c="Singular"/>
+    <sdef n="pl"    c="Plural"/>
+    <sdef n="sp"    c="Singular AND plural"/>
+    <sdef n="nn"    c="N?"/>
+    <sdef n="nt"    c="Neuter"/>
+    <sdef n="mf"    c="Both"/>
+    <sdef n="m"     c="Man"/>
+    <sdef n="f"     c="Foman"/>
+    <sdef n="mfn"    c="Both and neither"/>
+    <sdef n="p1"     c="Separate 1st person"/>
+    <sdef n="p2"     c="Separate 2nd person"/>
+    <sdef n="p3"     c="Separate 3rd person"/>
+    <sdef n="sint"  c="inflecting"/>
+    <sdef n="pos"  c="positive"/>
+    <sdef n="dem"  c="demonstratif"/>
+    <sdef n="det"  c="determiner"/>
+    <sdef n="def"  c="definiteerminer"/>
+    <sdef n="ind"  c="indefiniteerminer"/>
+    <sdef n="dat"  c="dative"/>
+    <sdef n="acc"  c="accusative"/>
+    <sdef n="gen"  c="genetive"/>
+    <sdef n="pers"  c="personal"/>
+    <sdef n="ref"  c="reflexive"/>
+    <sdef n="neg"  c="negation verb"/>
+    <sdef n="itg"  c="interrogative"/>
+    <sdef n="qst"  c="question clitic"/>
+    <sdef n="card"  c="question clitic"/>
+    <sdef n="nocard"  c="question clitic"/>
+    <sdef n="ord"  c="question clitic"/>
+    <sdef n="abbr"  c="question clitic"/>
+    <sdef n="acr"  c="question clitic"/>
+    <sdef n="qnt"  c="question clitic"/>
+    <sdef n="iobj"  c="question clitic"/>
+
+    <sdef n="ant"   c="-- antropomorphic"/>
+    <sdef n="top"   c="-- topological"/>
+    <sdef n="cog"   c="-- family name"/>
+    <sdef n="org"   c="-- organisation name"/>
+    <sdef n="al"   c="-- al name"/>
+
+    <sdef n="ine" c="inessive" />
+    <sdef n="nom" c="nominative" />
+    <sdef n="par" c="partitive" />
+    <sdef n="tra" c="partitive" />
+    <sdef n="ill" c="partitive" />
+  </sdefs>
+
+  <!-- }}}
+  {{{ paradigms -->
+
+  <pardefs>
+    <pardef n="anyg" c="when developing ignore genders until ambibuity">
+      <e><p><l/><r><s n="f"/></r></p></e>
+      <e><p><l/><r><s n="m"/></r></p></e>
+      <e><p><l/><r><s n="mf"/></r></p></e>
+      <e><p><l/><r><s n="mfn"/></r></p></e>
+      <e><p><l/><r><s n="nt"/></r></p></e>
+    </pardef>
+    <pardef n="anynp" c="just ignore np semantic non-sense">
+      <e><i><s n="al"/></i><par n="anyg"/></e>
+      <e><i><s n="ant"/></i></e>
+      <e><i><s n="ant"/><s n="f"/></i></e>
+      <e><i><s n="ant"/><s n="m"/></i></e>
+      <e><i><s n="ant"/></i><par n="anyg"/></e>
+      <e><i><s n="cog"/></i></e>
+      <e><i><s n="cog"/></i><par n="anyg"/></e>
+      <e><i><s n="org"/></i><par n="anyg"/></e>
+      <e><i><s n="top"/></i></e>
+      <e><i><s n="top"/></i><par n="anyg"/></e>
+      <e><p><l><s n="top"/></l><r><s n="ant"/></r></p><par n="anyg"/></e>
+      <e><p><l><s n="ant"/></l><r><s n="top"/></r></p><par n="anyg"/></e>
+      <e><p><l/><r><s n="al"/></r></p><par n="anyg"/></e>
+      <e><p><l/><r><s n="ant"/></r></p><par n="anyg"/></e>
+      <e><p><l/><r><s n="cog"/></r></p><par n="anyg"/></e>
+      <e><p><l/><r><s n="org"/></r></p><par n="anyg"/></e>
+      <e><p><l/><r><s n="top"/></r></p><par n="anyg"/></e>
+    </pardef>
+  </pardefs>
+  <!-- }}} -->
+
+  <section id="main" type="standard">
+
+    <!--     {{{ nouns -->
+
+    <e><p><l>ääni<s n="n"/></l><r>Stimme<s n="n"/></r></p></e>
+
+    <!-- }}}
+         {{{ adverbs -->
+
+
+    <e><p><l>äärimmäisen<s n="adv"/></l><r>äußerst<s n="adv"/></r></p></e>
+
+
+
+
+    <!-- }}}
+         {{{ verbs -->
+    <!-- regular -->
+
+
+
+
+    <e><p><l>leikkiä<s n="vblex"/></l><r>játszik<s n="vblex"/></r></p></e>
+    <e><p><l>tykätä<s n="vblex"/></l><r>imád<s n="vblex"/></r></p></e>
+    <e><p><l>rakastaa<s n="vblex"/></l><r>szeret<s n="vblex"/></r></p></e>
+    <e><p><l>nukkua<s n="vblex"/></l><r>alszik<s n="vblex"/></r></p></e>
+    <e><p><l>katsoa<s n="vblex"/></l><r>néz<s n="vblex"/></r></p></e>
+    <e><p><l>tietää<s n="vblex"/></l><r>tud<s n="vblex"/></r></p></e>
+    <e><p><l>puhua<s n="vblex"/></l><r>beszél<s n="vblex"/></r></p></e>
+    <e><p><l>mennä<s n="vblex"/></l><r>megy<s n="vblex"/></r></p></e>
+
+
+
+
+    <e><p><l>katsoa<s n="vblex"/><j/>ulos<s n="pr"/></l><r>kinéz<s n="vblex"/></r></p></e>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--}}}
+         {{{ negation verbs -->
+
+    <e><p><l>ei<s n="vblex"/><s n="neg"/></l><r>nincs<s n="vblex"/></r></p></e>
+
+    <!-- neg conj -->
+
+    <e><p><l>ei<s n="vblex"/><s n="neg"/>kä<s n="cnjcoo"/></l><r>noch<s n="cnjcoo"/></r></p></e>
+
+    <!-- }}}
+         {{{ verb to be -->
+
+    <e><p><l>olla<s n="vblex"/></l><r>van<s n="vbser"/></r></p></e>
+
+    <!-- }}}
+         {{{auxiliaries -->
+
+    <e><p><l>aikoa<s n="vblex"/></l><r>werden<s n="vaux"/></r></p></e>
+    <e><p><l>aikoa<s n="vblex"/></l><r>werden<s n="vblex"/></r></p></e>
+    <e><p><l>alkaa<s n="vaux"/></l><r>werden<s n="vaux"/></r></p></e>
+    <e><p><l>alkaa<s n="vaux"/></l><r>werden<s n="vblex"/></r></p></e>
+    <e><p><l>haluta<s n="vblex"/></l><r>wollen<s n="vaux"/></r></p></e>
+    <e><p><l>haluta<s n="vblex"/></l><r>wollen<s n="vbmod"/></r></p></e>
+    <e><p><l>haluta<s n="vblex"/></l><r>mögen<s n="vblex"/></r></p></e>
+    <e><p><l>haluta<s n="vblex"/></l><r>mögen<s n="vbmod"/></r></p></e>
+    <e><p><l>osata<s n="vaux"/></l><r>können<s n="vbmod"/></r></p></e>
+    <e><p><l>pitää<s n="vaux"/></l><r>freuen<s n="vblex"/></r></p></e>
+    <e><p><l>pitää<s n="vblex"/></l><r>mögen<s n="vblex"/></r></p></e>
+    <e><p><l>voida<s n="vaux"/></l><r>dürfen<s n="vbmod"/></r></p></e>
+    <e><p><l>täytyä<s n="vaux"/></l><r>müssen<s n="vbmod"/></r></p></e>
+    <e><p><l>täytyä<s n="vaux"/></l><r>sollen<s n="vbmod"/></r></p></e>
+    <e><p><l>voida<s n="vaux"/></l><r>können<s n="vbmod"/></r></p></e>
+    <e><p><l>voida<s n="vblex"/></l><r>können<s n="vbmod"/></r></p></e>
+
+    <!-- }}}
+         {{{ conjunctions -->
+
+    <e><p><l>että<s n="cnjsub"/></l><r>da<s n="cnjsub"/></r></p></e>
+    <e><p><l>ja<s n="cnjcoo"/></l><r>és<s n="cnjcoo"/></r></p></e>
+
+    <!-- }}}
+         {{{ pronouns -->
+
+    <!-- personal pronouns -->
+
+
+    <!-- minä.prn.pres.p2.sg. * ↔ ich.prn.pers.p1.mf.sg.* -->
+    <e><p><l>minä<s n="prn"/></l><r>én<s n="prn"/></r></p></e>
+
+    <!-- sinä.prn.pres.p2.sg. * ↔ du.prn.pers.p1.mf.sg.* -->
+    <e><p><l>sinä<s n="prn"/></l><r>ti<s n="prn"/></r></p></e>
+
+    <e><p><l>hän<s n="prn"/></l><r>ő<s n="prn"/></r></p></e>
+
+
+    <e><p><l>he<s n="prn"/></l><r>ők<s n="prn"/></r></p></e>
+
+    <e><p><l>me<s n="prn"/></l><r>mi<s n="prn"/></r></p></e>
+
+
+
+
+    <!-- pers to non-pers -->
+
+    <e><p><l>se<s n="prn"/></l><r>itt<s n="prn"/></r></p></e>
+    <e><p><l>nämä<s n="prn"/></l><r>ott<s n="prn"/></r></p></e>
+
+    <!-- + interrogatives -->
+
+    <e><p><l>mikä<s n="prn"/><s n="itg"/></l><r>mi<s n="prn"/><s n="itg"/><s n="mf"/></r></p></e>
+    <e><p><l>missä<s n="prn"/></l><r>miben<s n="prn"/><s n="itg"/></r></p></e>
+
+    <!-- + relatives -->
+
+    <e><p><l>mikä<s n="prn"/></l><r>mi<s n="rel"/><s n="nn"/><s n="mf"/><s n="sp"/></r></p></e>
+
+    <!-- demons -->
+
+    <e><p><l>tämä<s n="prn"/></l><r>dieser<s n="det"/></r></p></e>
+
+    <!-- }}}
+         {{{ determiners! -->
+
+    <e><p><l>yksi<s n="det"/></l><r>egy<s n="det"/></r></p></e>
+    <e><p><l>se<s n="det"/></l><r>az<s n="det"/></r></p></e>
+
+
+
+    <!-- }}}
+         {{{ adjectives -->
+
+
+    <e><p><l>kaunis<s n="adj"/></l><r>rossz<s n="adj"/></r></p></e>
+
+
+
+
+    <!-- }}}
+         {{{ adpositions -->
+
+    <e><p><l>alapuolella<s n="post"/></l><r>unterhalb<s n="pr"/></r></p></e>
+
+    <!-- }}}
+         {{{ clits -->
+
+    <e r="LR"><p><l>ko<s n="qst"/></l><r/></p></e>
+
+    <!-- }}}
+         {{{ numerals -->
+
+    <e><p><l>yksi<s n="num"/></l><r>egy<s n="num"/></r></p></e>
+    <e><p><l>kaksi<s n="num"/></l><r>kettő<s n="num"/></r></p></e>
+    <e><p><l>kolme<s n="num"/></l><r>harom<s n="num"/></r></p></e>
+    <e><p><l>neljä<s n="num"/></l><r>negy<s n="num"/></r></p></e>
+    <e><p><l>viisi<s n="num"/></l><r>öt<s n="num"/></r></p></e>
+    <e><p><l>kuusi<s n="num"/></l><r>hát<s n="num"/></r></p></e>
+    <e><p><l>seitsemän<s n="num"/></l><r>het<s n="num"/></r></p></e>
+    <e><p><l>kahdeksan<s n="num"/></l><r>nyulcs<s n="num"/></r></p></e>
+    <e><p><l>yhdeksän<s n="num"/></l><r>kilenc<s n="num"/></r></p></e>
+
+
+    <!-- digit loops -->
+
+
+    <!-- any digit series -->
+    <e><re>[0-9][0-9]*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+
+    <!-- decimals -->
+    <e><re>[0-9][0-9]*[,][0-9]*</re><p><l><s n="num"/><s n="nocard"/></l><r><s n="num"/></r></p></e>
+
+
+    <!-- any ordinal with final . -->
+    <e><re>[0-9][0-9 ,]*[.]</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+
+    <!-- clock with card hacks -->
+    <e><re>[0-9]+:[0-9]+:?[0-9]*</re><p><l><s n="num"/><s n="nocard"/></l><r><s n="num"/></r></p></e>
+
+    <!-- day with card hacks -->
+    <e><re>[0-9][0-9]?[.][0-9][0-9]?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+    <e><re>[0-9][0-9]?[.][0-9][0-9]?[.][0-9][0-9]*</re><p><l><s n="num"/><s n="nocard"/></l><r><s n="num"/></r></p></e>
+
+    <!-- turn one thousand separator space<->. -->
+    <e><re>[0-9][0-9]*</re><p><l><b/></l><r>.</r></p><re>[0-9][0-9][0-9]</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+
+    <!-- romans -->
+
+    <e><re>[XVILMC][XVILMC]*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+
+    <!-- odd digit exprs -->
+
+    <e><p><l>4:3<s n="n"/></l><r>4:3<s n="num"/></r></p></e>
+    <e><p><l>16:9<s n="n"/></l><r>16:9<s n="num"/></r></p></e>
+
+    <!-- }}}
+         {{{ props -->
+
+    <e><i>Budapest<s n="np"/></i></e>
+
+
+
+    <!--}}}
+         {{{ translated names -->
+
+    <e><p><l>Unkari<s n="np"/></l><r>Magyarország<s n="np"/></r></p></e>
+
+
+    <!-- }}}
+         {{{ interjections -->
+
+    <e><p><l>he<s n="ij"/></l><r>heh<s n="ij"/></r></p></e>
+    <e><p><l>ha<s n="ij"/></l><r>ha<s n="ij"/></r></p></e>
+    <e><p><l>hei<s n="ij"/></l><r>szia<s n="ij"/></r></p></e>
+    <e><p><l>kiitos<s n="ij"/></l><r>köszönöm<s n="ij"/></r></p></e>
+    <e><p><l>anteeksi<s n="ij"/></l><r>sajnos<s n="ij"/></r></p></e>
+    <e><p><l>pliis<s n="ij"/></l><r>kérem<s n="ij"/></r></p></e>
+
+    <!-- }}}
+         {{{ puncts -->
+
+    <e><p><l>.<s n="punct"/></l><r>.<s n="sent"/></r></p></e>
+    <e><p><l>?<s n="punct"/></l><r>?<s n="sent"/></r></p></e>
+    <e><p><l>!<s n="punct"/></l><r>!<s n="sent"/></r></p></e>
+    <e><p><l>,<s n="punct"/></l><r>,<s n="cm"/></r></p></e>
+    <e><p><l>"<s n="punct"/></l><r>"<s n="lquot"/></r></p></e>
+    <e><p><l>'<s n="punct"/></l><r>'<s n="apos"/></r></p></e>
+    <e><p><l>»<s n="punct"/></l><r>»<s n="rquot"/></r></p></e>
+    <e><p><l>»<s n="punct"/></l><r>«<s n="lquot"/></r></p></e>
+    <e><p><l>”<s n="punct"/></l><r>“<s n="rquot"/></r></p></e>
+    <e><p><l>”<s n="punct"/></l><r>„<s n="lquot"/></r></p></e>
+    <e><p><l>’<s n="punct"/></l><r>’<s n="apos"/></r></p></e>
+    <e><p><l>’<s n="punct"/></l><r>‘<s n="apos"/></r></p></e>
+    <e><p><l>:<s n="punct"/></l><r>:<s n="sent"/></r></p></e>
+    <e><p><l>;<s n="punct"/></l><r>;<s n="sent"/></r></p></e>
+    <e><p><l>]<s n="punct"/></l><r>]<s n="rpar"/></r></p></e>
+    <e><p><l>[<s n="punct"/></l><r>[<s n="lpar"/></r></p></e>
+    <e><p><l>}<s n="punct"/></l><r>}<s n="rpar"/></r></p></e>
+    <e><p><l>{<s n="punct"/></l><r>{<s n="lpar"/></r></p></e>
+    <e><p><l>)<s n="punct"/></l><r>)<s n="rpar"/></r></p></e>
+    <e><p><l>(<s n="punct"/></l><r>(<s n="lpar"/></r></p></e>
+    <e><p><l>-<s n="punct"/></l><r>-<s n="guio"/></r></p></e>
+    <e><p><l>–<s n="punct"/></l><r>–<s n="guio"/></r></p></e>
+
+    <!--
+         }}}
+     {{{ bugs
+    -->
+
+
+
+  </section>
+</dictionary>
+<!-- vim: set foldmethod=marker: -->
