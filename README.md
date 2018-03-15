@@ -1,2 +1,1 @@
-# apertium-fin-hun
-Apertium translator between Finnish and Hungarian
+This is in https://github.com/apertium/apertium-fin-hun now

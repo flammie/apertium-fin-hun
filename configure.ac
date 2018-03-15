@@ -20,10 +20,10 @@ AC_PROG_AWK
 
 m4_define([required_apertium_version], [3.3.0])
 PKG_CHECK_MODULES(APERTIUM,   apertium >= required_apertium_version, [], [PKG_CHECK_MODULES(APERTIUM,   apertium-3.2 >= required_apertium_version)])
-                          
+
 
 AC_PATH_PROG([LTPRINT], [lt-print], [no])
-AS_IF([test x$ac_cv_path_LTPRINT = x], 
+AS_IF([test x$ac_cv_path_LTPRINT = x],
       [AC_MSG_ERROR([You do not have lt-print installed.])])
 AS_IF([test x$ac_cv_path_LTPRINT = xno,],
       [AC_MSG_ERROR([You do not have lt-print installed.])])
@@ -106,3 +106,4 @@ AP_MKINCLUDE
 
 AC_OUTPUT([Makefile apertium-fin-hun.pc])
 
+AC_MSG_ERROR([This is in https://github.com/apertium/apertium-fin-hun now])
